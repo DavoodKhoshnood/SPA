@@ -3,12 +3,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Manage People</h2>
-<a class="btn btn-success mb-1" id="btnAdd">Add</a>
 
-<div id="view">
-    Please wait....
+<div id="view" class="container-md">
+    Data is coming.....
 </div>
+<a class="btn btn-success ml-md-3 mt-1" id="btnAdd">Add</a>
 
 @section Scripts
 {
@@ -16,7 +15,7 @@
         $(function () {
             $("#view").load("/Home/List");
         });
-        $("#btnAdd").click( function () {
+        $("#btnAdd").click(function () {
             $("#view").load("/Home/Add");
             $("#btnAdd").hide();
         });
@@ -33,6 +32,7 @@
         }
         function Edit(id) {
             $("#view").load("/Home/Edit/" + id);
+            $("#btnAdd").hide();
         }
     </script>
 }

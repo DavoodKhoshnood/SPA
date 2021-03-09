@@ -20,6 +20,7 @@
     <dt></dt>
     <dd>
         <input type="button" class="btn btn-warning btn-sm" value="Edit" id="btnEdit" />
+        <button class="btn btn-sm btn-primary" id="btnBack">Back to list</button>
     </dd>
 
 </dl>
@@ -46,5 +47,9 @@
             $("#view").load("/Home/List");
             $("#btnAdd").show();
         });
+    });
+    $("#btnBack").click(function () {
+        $("#view").load("/Home/List");
+        $("#btnAdd").show();
     });
 </script>
